@@ -1,0 +1,3 @@
+OK: 301 grafos comparados con oraculo independiente.
+OK: trazas de los 5 ejemplos coherentes.
+Semilla aleatoria: 2026. Incluye vacio, aislados, desconectados, lazos y aristas paralelas.

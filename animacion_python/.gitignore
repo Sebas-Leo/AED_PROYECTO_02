@@ -1,0 +1,9 @@
+build/
+__pycache__/
+.venv/
+output/frames/
+output/*.mp4
+output/*.wav
+output/*.mp3
+output/*.zip
+*.pdf
