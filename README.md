@@ -1,4 +1,4 @@
-# Articulaciones — Anima tu Algoritmo
+# Articulaciones
 
 Proyecto educativo para el curso **CS2023 Algoritmos y Estructuras de Datos (2026-2)** de la **Universidad de Ingeniería y Tecnología (UTEC)**.
 
@@ -385,6 +385,5 @@ Produce `animacion_python/output/Proyecto_Video_Articulaciones.zip` con las dos 
 1. [CP-Algorithms — Finding articulation points](https://cp-algorithms.com/graph/cutpoints.html). Referencia conceptual de DFS, `low` y regla de la raíz.
 2. [Documentación de Pillow](https://pillow.readthedocs.io/). Dibujo de fotogramas.
 3. [Documentación de FFmpeg](https://ffmpeg.org/documentation.html). Codificación y mezcla de audio.
-4. [AED_PROYECTO_01](https://github.com/rodri-eng/AED_PROYECTO_01). Referencia de organización y documentación del equipo.
 
 El código y los visuales se elaboraron para este proyecto con asistencia de IA y se verifican con las pruebas incluidas.
