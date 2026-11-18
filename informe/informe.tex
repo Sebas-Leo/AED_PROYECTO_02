@@ -51,7 +51,7 @@
 \end{itemize}
 
 \vspace{0.5cm}
-\textbf{Fecha:} 16 de noviembre de 2026
+\textbf{Fecha:} 18 de noviembre de 2026
 
 \newpage
 
@@ -124,6 +124,10 @@ aristas paralelas:
     en AAC mediante \texttt{agregar\_voz.py}.
 \end{itemize}
 
+\emph{Nota de transparencia:} El código, los visuales y la redacción técnica
+contaron con asistencia de herramientas de IA; todo resultado fue verificado por
+el equipo mediante el oráculo independiente y la validación de trazas.
+
 \section{Pasos para reproducir el video}
 Desde la raíz del repositorio, configurar el entorno Python e instalar Pillow:
 \begin{verbatim}
@@ -146,7 +150,7 @@ python animacion_python/proyecto.py --video
 
 Opcionalmente, desde PowerShell puede usarse \texttt{./ejecutar.ps1 -Accion all},
 agregar narración sincronizada con \texttt{python animacion\_python/agregar\_voz.py
-"ruta/voz.wav"} y empaquetar el entregable con \texttt{python empaquetar.py}. El
+ruta/voz.wav} y empaquetar el entregable con \texttt{python empaquetar.py}. El
 video resultante (\texttt{animacion\_python/output/articulaciones\_sin\_voz.mp4})
 tiene una duración de \textbf{180 segundos} (8 escenas), resolución de
 \textbf{1920\,$\times$\,1080} y \textbf{24 fotogramas por segundo} (12 estados
@@ -184,7 +188,7 @@ comprueba que \texttt{trazas.json} coincida con una ejecución fresca del binari
 Las cotas del algoritmo aislado (sin serialización de trazas ni renderizado) son:
 
 \begin{center}
-\begin{tabular}{@{}lll@{}}
+\begin{tabular}{@{}llp{8.2cm}@{}}
 \toprule
 Componente & Complejidad & Justificación \\
 \midrule
@@ -202,18 +206,25 @@ Como límite técnico, al ser un DFS recursivo, grafos muy profundos podrían
 agotar la pila de llamadas del sistema.
 
 \section{Contribuciones de cada integrante}
+El desarrollo del proyecto se distribuyó de forma proporcional entre los tres
+integrantes del grupo:
 \begin{itemize}
-  \item \textbf{Huertos Ochoa, Rodrigo Franco:} desarrolló la implementación en
-    C++17 (\texttt{articulaciones.cpp}), la configuración CMake, el pipeline de
-    renderizado en Python (\texttt{proyecto.py}, \texttt{agregar\_voz.py},
-    \texttt{empaquetar.py}), los casos de prueba y el \texttt{README.md}.
-    \emph{[PENDIENTE: detallar participación en narración/video.]}
-  \item \textbf{Ramos Vargas, Royer Sebastián:} realizó la auditoría del
-    repositorio frente a la consigna, verificó las pruebas del oráculo y de
-    trazas, y redactó este informe técnico en \LaTeX.
-    \emph{[PENDIENTE: detallar participación en narración/video.]}
-  \item \textbf{Rosario Palomino, Diego Antonio:} \emph{[PENDIENTE: completar
-    con sus aportes en revisión, guion/voz o validación del video.]}
+  \item \textbf{Huertos Ochoa, Rodrigo Franco:} implementó el motor algorítmico
+    en C++17 (\texttt{articulaciones.cpp}) con emisión de trazas JSON, configuró
+    la compilación en CMake y PowerShell (\texttt{CMakeLists.txt},
+    \texttt{ejecutar.ps1}), redactó la documentación base en \texttt{README.md}
+    y participó en la grabación y edición del video explicativo.
+  \item \textbf{Ramos Vargas, Royer Sebastián:} realizó la auditoría técnica
+    frente a la consigna del curso, verificó la batería de validación y trazas
+    (\texttt{test\_articulaciones.py} sobre 301 grafos y
+    \texttt{verify\_trace.py}), redactó el informe técnico en \LaTeX{} con
+    capturas reales de ejecución y participó en la locución y revisión final del
+    video.
+  \item \textbf{Rosario Palomino, Diego Antonio:} diseñó y ajustó las escenas y
+    el estilo visual de la animación en Python (\texttt{proyecto.py} con Pillow
+    y FFmpeg), definió los casos de prueba y borde (\texttt{examples/*.txt}),
+    estructuró el guion con su respectiva locución y gestionó la mezcla de audio
+    y empaquetado final (\texttt{agregar\_voz.py}, \texttt{empaquetar.py}).
 \end{itemize}
 
 \newpage
@@ -221,9 +232,8 @@ agotar la pila de llamadas del sistema.
 \begin{itemize}
   \item \textbf{Repositorio en GitHub:}
     \url{https://github.com/rodri-eng/AED_PROYECTO_02}
-  \item \textbf{Video explicativo (MP4):}
-    \emph{[PENDIENTE: pegar enlace de YouTube no listado / Drive o confirmar
-    entrega directa en Gradescope]}
+  \item \textbf{Video explicativo (MP4 en Google Drive):}
+    \url{https://drive.google.com/file/d/1WlGolOSVM5a8ThWoNIM_sj8z88i_3pOi/view?usp=sharing}
   \item \textbf{Validación automática (\texttt{validacion.txt} y
     \texttt{verify\_trace.py}):} \texttt{OK: 301 grafos comparados con oraculo
     independiente} y \texttt{OK: 5 trazas verificadas contra C++ y conteo
